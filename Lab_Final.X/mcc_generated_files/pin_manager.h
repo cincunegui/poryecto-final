@@ -1529,11 +1529,11 @@ inline static void ACC_SCK_SetValue(bool value)
   @Example
     <code>
     // Set RC5 high (1)
-    channel_AN15_SetHigh();
+    channel_POT_SetHigh();
     </code>
 
 */
-#define channel_AN15_SetHigh()          ( LATCSET = (1 << 5) )
+#define channel_POT_SetHigh()          ( LATCSET = (1 << 5) )
 /**
   @Summary
     Sets the GPIO pin, RC5, low using LATC5.
@@ -1553,11 +1553,11 @@ inline static void ACC_SCK_SetValue(bool value)
   @Example
     <code>
     // Set RC5 low (0)
-    channel_AN15_SetLow();
+    channel_POT_SetLow();
     </code>
 
 */
-#define channel_AN15_SetLow()           ( LATCCLR = (1 << 5) )
+#define channel_POT_SetLow()           ( LATCCLR = (1 << 5) )
 
 /**
   @Summary
@@ -1578,19 +1578,19 @@ inline static void ACC_SCK_SetValue(bool value)
   @Example
     <code>
     // Set RC5 to low.
-    channel_AN15_SetValue(false);
+    channel_POT_SetValue(false);
     </code>
 
 */
-inline static void channel_AN15_SetValue(bool value)
+inline static void channel_POT_SetValue(bool value)
 {
   if(value)
   {
-    channel_AN15_SetHigh();
+    channel_POT_SetHigh();
   }
   else
   {
-    channel_AN15_SetLow();
+    channel_POT_SetLow();
   }
 }
 
@@ -1613,11 +1613,11 @@ inline static void channel_AN15_SetValue(bool value)
   @Example
     <code>
     // Toggle RC5
-    channel_AN15_Toggle();
+    channel_POT_Toggle();
     </code>
 
 */
-#define channel_AN15_Toggle()           ( LATCINV = (1 << 5) )
+#define channel_POT_Toggle()           ( LATCINV = (1 << 5) )
 /**
   @Summary
     Reads the value of the GPIO pin, RC5.
@@ -1639,11 +1639,11 @@ inline static void channel_AN15_SetValue(bool value)
     uint16_t portValue;
 
     // Read RC5
-    postValue = channel_AN15_GetValue();
+    postValue = channel_POT_GetValue();
     </code>
 
 */
-#define channel_AN15_GetValue()         PORTCbits.RC5
+#define channel_POT_GetValue()         PORTCbits.RC5
 /**
   @Summary
     Configures the GPIO pin, RC5, as an input.
@@ -1663,11 +1663,11 @@ inline static void channel_AN15_SetValue(bool value)
   @Example
     <code>
     // Sets the RC5 as an input
-    channel_AN15_SetDigitalInput();
+    channel_POT_SetDigitalInput();
     </code>
 
 */
-#define channel_AN15_SetDigitalInput()   ( TRISCSET = (1 << 5) )
+#define channel_POT_SetDigitalInput()   ( TRISCSET = (1 << 5) )
 /**
   @Summary
     Configures the GPIO pin, RC5, as an output.
@@ -1687,11 +1687,11 @@ inline static void channel_AN15_SetValue(bool value)
   @Example
     <code>
     // Sets the RC5 as an output
-    channel_AN15_SetDigitalOutput();
+    channel_POT_SetDigitalOutput();
     </code>
 
 */
-#define channel_AN15_SetDigitalOutput()   ( TRISCCLR = (1 << 5) )
+#define channel_POT_SetDigitalOutput()   ( TRISCCLR = (1 << 5) )
 /**
   @Summary
     Sets the GPIO pin, RD0, high using LATD0.

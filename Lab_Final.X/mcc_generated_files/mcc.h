@@ -52,13 +52,13 @@
 #include <stdbool.h>
 
 #include "tmr2.h"
-#include "rtcc.h"
-#include "spi1.h"
 #include "adc1.h"
-#include "usb/usb.h"
+#include "watchdog.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
-#include "watchdog.h"
+#include "rtcc.h"
+#include "usb/usb.h"
+#include "spi1.h"
 
 #warning "This file will be removed in future MCC releases. Use system.h instead."
 

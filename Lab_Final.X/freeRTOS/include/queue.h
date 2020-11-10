@@ -71,8 +71,12 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+#include"portmacro.h"
+#include"mpu_wrappers.h"
+
+
 #ifndef INC_FREERTOS_H
-	#error "include FreeRTOS.h" must appear in source files before "include queue.h"
+#error "include FreeRTOS.h" must appear in source files before "include queue.h"
 #endif
 
 #ifdef __cplusplus

@@ -153,7 +153,7 @@ extern "C" {
         {
             return 3;
         }
-     */
+     */    
     void ANALOG_convert( void *p_param);
 
     uint16_t ANALOG_getResult ( void );

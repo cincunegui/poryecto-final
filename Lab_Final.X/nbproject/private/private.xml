@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/platform/LIS3DH/LIS3DH.h</file>
-            <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/platform/LIS3DH/LIS3DH.c</file>
-            <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/framework/Accelerometer/Accelerometer.c</file>
+            <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/system/UI/UI.h</file>
+            <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/system/Events/events.h</file>
             <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/framework/Analog/Analog.c</file>
             <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/framework/Analog/Analog.h</file>
             <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/main.c</file>
-            <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/framework/Accelerometer/Accelerometer.h</file>
+            <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/system/UI/UI.c</file>
+            <file>file:/C:/Users/Usuario/MPLABXProjects/proyecto-final/Lab_Final.X/freeRTOS/include/semphr.h</file>
         </group>
     </open-files>
 </project-private>

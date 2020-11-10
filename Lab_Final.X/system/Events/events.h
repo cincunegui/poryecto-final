@@ -1,5 +1,7 @@
 
-
+#include <machine/int_types.h>
+#include "stdint.h"
+#include "stdbool.h"
 #ifndef EVENTS_H    /* Guard against multiple inclusion */
 #define EVENTS_H
 

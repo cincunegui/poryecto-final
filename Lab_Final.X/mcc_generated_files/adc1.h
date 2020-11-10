@@ -76,7 +76,7 @@
  */
 typedef enum 
 {
-    channel_AN15 =  0xF,
+    channel_POT =  0xF,
     ADC1_CHANNEL_VDD_CORE =  0x1B,
     ADC1_CHANNEL_VBG =  0x1C,
     ADC1_CHANNEL_AVSS =  0x1D,

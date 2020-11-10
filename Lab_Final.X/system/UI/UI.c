@@ -1,15 +1,15 @@
 
 
 #include "UI.h"
-#include "../../framework/USB/USB_fwk.h"
 #include <string.h>
+#include "stdint.h"
 #include <ctype.h>
 #include <xc.h>
-#include "string.h"
 #include <time.h>
-#include "events.h"
-#include "USB_fwk.h"
-#include "semphr.h"
+#include "../Events/events.h"
+#include "../../framework/USB/USB_fwk.h"
+#include "../../freeRTOS/include/semphr.h"
+
 
 
 //PALABRAS PARA DESPLEGAR
@@ -29,7 +29,10 @@ const uint8_t Ingresar10[]   = "Ingresar color...\n";
 const uint8_t Ingresar11[]   = "Ingresar time...\n";
 const uint8_t Ingresar12[]   = "Ingresar la evento a Consultar...\n";
 struct tm CurrentTime;// UTILIZO PARA GUARDAR LA HORA DEL RTCC
-USB_checkStatus( );
+ui_menu_states_t Entrada;
+app_event_t eventos[MAX_EVENTOS];
+
+USB_checkStatus(  );
 
 void UI_Case( void ) {
     static ui_menu_states_t menuState;
@@ -64,7 +67,7 @@ void UI_Case( void ) {
            // despues de este case me muevo dependiendo de lo que haya elegito el usuario
            //luego de hacer lo pedido vuelvo a mostrar opciones     
             case( UI_MENU_STATE_OPTIONS_ENTRADA):
-                int Entrada = UI_MENU_STATE_OPTIONS_ENTRADA + atoi(rxData);
+            Entrada = UI_MENU_STATE_OPTIONS_ENTRADA + atoi(rxData);
                 switch( Entrada ){
                     case( UI_MENU_STATE_SET_TIMEDATE ):
                         Set_Date();
@@ -154,9 +157,8 @@ void Consultar_evento(void){
     uint8_t buff;
     uint8_t i = 0;
     uint8_t buff_salida[10];
-    if( USBGetDeviceState() >= CONFIGURED_STATE && !USBIsDeviceSuspended()){
-        putsUSBUSART((uint8_t*)OPCIONES4);
-        //putUSBUSART(Ingresar12, strlen(Ingresar12));
+    if( USB_getConnectedStatus() == true ){
+       // putsUSBUSART((uint8_t*)OPCIONES4);
         CDCTxService();
         buff = getsUSBUSART(buff_salida, sizeof (buff_salida));
         CDCTxService();
@@ -166,20 +168,16 @@ void Consultar_evento(void){
                 buff = atoi(buff_salida);
                 if (eventos[i].command == buff) { //podria no ir                    
                     itoa(buff_salida,eventos[i].command,2);
-                    putsUSBUSART(buff_salida);
-                    //putUSBUSART(buff_salida, strlen(buff_salida)); 
+                    putsUSBUSART(buff_salida); 
                     CDCTxService();
                     itoa(buff_salida,eventos[i].param,2);
-                    putsUSBUSART(buff_salida);
-                    //putUSBUSART(buff_salida, strlen(buff_salida)); 
+                    putsUSBUSART(buff_salida); 
                     CDCTxService();
                     itoa(buff_salida,eventos[i].color,2);
                     putsUSBUSART(buff_salida);
-                    //putUSBUSART(buff_salida, strlen(buff_salida));
                     CDCTxService();
                     itoa(buff_salida,eventos[i].time,2);
-                    putsUSBUSART(buff_salida);
-                    //putUSBUSART(buff_salida, strlen(buff_salida)); 
+                    putsUSBUSART(buff_salida); 
                     CDCTxService();                   
                 }
             i++;

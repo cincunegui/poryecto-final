@@ -84,12 +84,12 @@
 #include "clock.h"
 #include "system.h"
 #include "tmr2.h"
-#include "rtcc.h"
-#include "spi1.h"
 #include "adc1.h"
-#include "usb/usb.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
+#include "rtcc.h"
+#include "usb/usb.h"
+#include "spi1.h"
 
 void SYSTEM_Initialize(void)
 {

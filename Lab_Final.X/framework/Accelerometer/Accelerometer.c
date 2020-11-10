@@ -609,7 +609,7 @@ void sensitivity_update()
                 }
                 else
                 {
-                    sensitivity = 0.001
+                    sensitivity = 0.001;
                 }
                 break;
                     

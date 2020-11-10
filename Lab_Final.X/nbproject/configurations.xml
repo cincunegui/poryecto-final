@@ -14,13 +14,13 @@
       <logicalFolder name="f1" displayName="freeRTOS" projectFiles="true">
         <logicalFolder name="f1" displayName="include" projectFiles="true">
           <itemPath>freeRTOS/include/croutine.h</itemPath>
-          <itemPath>freeRTOS/include/FreeRTOS.h</itemPath>
           <itemPath>freeRTOS/include/event_groups.h</itemPath>
           <itemPath>freeRTOS/include/queue.h</itemPath>
           <itemPath>freeRTOS/include/semphr.h</itemPath>
           <itemPath>freeRTOS/include/task.h</itemPath>
           <itemPath>freeRTOS/include/timers.h</itemPath>
           <itemPath>freeRTOS/include/list.h</itemPath>
+          <itemPath>freeRTOS/include/FreeRTOS.h</itemPath>
         </logicalFolder>
         <itemPath>freeRTOS/include/portable.h</itemPath>
         <itemPath>freeRTOS/include/projdefs.h</itemPath>
@@ -60,18 +60,17 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f4" displayName="system" projectFiles="true">
-        <logicalFolder name="f1" displayName="events" projectFiles="true">
-          <itemPath>system/Events/events.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="f2" displayName="UI" projectFiles="true">
           <itemPath>system/UI/UI.h</itemPath>
         </logicalFolder>
         <itemPath>system/app.h</itemPath>
+        <itemPath>system/Events/events.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f5" displayName="utils" projectFiles="true">
         <itemPath>utils/utils.h</itemPath>
       </logicalFolder>
       <itemPath>FreeRTOSConfig.h</itemPath>
+      <itemPath>auxiliares.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -130,18 +129,17 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f4" displayName="system" projectFiles="true">
-        <logicalFolder name="f1" displayName="events" projectFiles="true">
-          <itemPath>system/Events/events.c</itemPath>
-        </logicalFolder>
         <logicalFolder name="f2" displayName="UI" projectFiles="true">
           <itemPath>system/UI/UI.c</itemPath>
         </logicalFolder>
         <itemPath>system/app.c</itemPath>
+        <itemPath>system/Events/events.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f5" displayName="utils" projectFiles="true">
         <itemPath>utils/utils.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>auxiliares.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
